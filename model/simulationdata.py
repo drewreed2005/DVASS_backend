@@ -25,21 +25,13 @@ class SimulationData(db.Model):
     _streak = db.Column(db.String(255), unique=True, nullable=False)
     
     
-    
-
     # constructor of a User object, initializes the instance variables within object (self)
     def __init__(self, username="Sreeja", streak=10):
        # variables with self prefix become part of the object, 
         self._username = username
         self._streak= streak
        
-        
-
-   
-   
-   
-   
-   
+    
     
     # output content using str(object) in human readable form, uses getter
     # output content using json dumps, this is ready for API response
@@ -47,10 +39,7 @@ class SimulationData(db.Model):
         return json.dumps(self.read())
 
    
-
-
 """Database Creation and Testing """
-
 
 # Builds working data for testing
 def initSimulationData():
